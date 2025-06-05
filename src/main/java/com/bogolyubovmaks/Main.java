@@ -8,7 +8,7 @@ public class Main {
         //Создание и заполнение массива
         int[] myArray = new int[20];
 
-        for (int i = 1; i < myArray.length; i++){
+        for (int i = 0; i < myArray.length; i++){
             myArray[i] = new Random().nextInt(100);
             System.out.println(myArray[i]);
         }
@@ -16,7 +16,7 @@ public class Main {
         //Наибольший элемент
         int max = myArray[0];
 
-        for (int i = 1; i < myArray.length; i++){
+        for (int i = 0; i < myArray.length; i++){
             if (myArray[i] > max) {
                 max = myArray[i];
             }
@@ -26,7 +26,7 @@ public class Main {
         //Сумма элементов
         int sum = 0;
 
-        for (int i = 1; i < myArray.length; i++){
+        for (int i = 0; i < myArray.length; i++){
             sum += myArray[i];
         }
         System.out.println("Сумма всех элементов массива равна:" + sum);
