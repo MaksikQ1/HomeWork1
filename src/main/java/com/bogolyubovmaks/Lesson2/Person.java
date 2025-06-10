@@ -20,15 +20,15 @@ public class Person {
     }
 
     void talk() {
-        if (fullName != null && age != 0 && id != 2) {
+        if (fullName != null && age != 0 && id != 2 && !fullName.isEmpty()) {
             System.out.println("Привет я " + fullName + " и мне " + age + " лет ");
-        } else if (fullName != null && age != 0 && id == 2) {
+        } else if (fullName != null && age != 0 && id == 2 && !fullName.isEmpty()) {
             System.out.println("Привет я, " + fullName + ", избранный");
         }
     }
 
     //Узнать количство объектов
-    void count(){
+    static void count(){
         System.out.println("Создано " + id + " объектов");
     }
 
