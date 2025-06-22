@@ -13,8 +13,7 @@ public class CreditCard  extends BankCard {
     @Override
     public void deposit(double amount) {
         System.out.println("-------------------------------");
-        if (amount <= 0) {
-            System.out.println("Сумма пополнения должна быть положительной");
+        if (!super.verifyAmountDeposit(amount)) {
             return;
         }
 
@@ -45,8 +44,7 @@ public class CreditCard  extends BankCard {
     @Override
     public void makePurchase(double amount) {
         System.out.println("-------------------------------");
-        if (amount <= 0) {
-            System.out.println("Сумма покупки должна быть положительной");
+        if (!super.verifyAmountPurchase(amount)) {
             return;
         }
 

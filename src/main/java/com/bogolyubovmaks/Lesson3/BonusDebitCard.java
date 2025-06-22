@@ -11,10 +11,10 @@ public class BonusDebitCard extends BankCard {
     @Override
     public void deposit(double amount) {
         System.out.println("-------------------------------");
-        if (amount <= 0) {
-            System.out.println("Сумма пополнения должна быть положительной");
+        if (!super.verifyAmountDeposit(amount)) {
             return;
         }
+
         balance += amount;
         System.out.println("Пополнение на " + formatMoney(amount) +
                 ". Новый баланс: " + formatMoney(balance));
@@ -23,8 +23,7 @@ public class BonusDebitCard extends BankCard {
     @Override
     public void makePurchase(double amount) {
         System.out.println("-------------------------------");
-        if (amount <= 0) {
-            System.out.println("Сумма покупки должна быть положительной");
+        if (!super.verifyAmountPurchase(amount)) {
             return;
         }
         if (balance < amount) {

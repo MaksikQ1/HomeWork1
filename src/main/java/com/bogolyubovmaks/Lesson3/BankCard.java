@@ -11,6 +11,22 @@ public abstract class BankCard{
         this.balance = balance;
     }
 
+    protected boolean verifyAmountDeposit(double amount) {
+        if (amount <= 0) {
+            System.out.println("Сумма пополнения должна быть положительной");
+            return false;
+        }
+        return true;
+    }
+
+    protected boolean verifyAmountPurchase(double amount) {
+        if (amount <= 0) {
+            System.out.println("Сумма покупки должна быть положительной");
+            return false;
+        }
+        return true;
+    }
+
     public double getBalance() {
         return balance;
     }
